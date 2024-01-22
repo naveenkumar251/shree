@@ -2,8 +2,9 @@ FROM ubuntu:latest
 RUN apt-get update
 RUN apt-get install -y nginx 
 RUN apt-get install -y git
-WORKDIR /home
+RUN mkdir /home/naveen/
+RUN cd /home/naveen/
 RUN git clone https://github.com/naveenkumar251/kube.git
-WORKDIR /home/
-COPY /home/kube/shree-inter/* /var/www/html/
+RUN ls -ltr /home/naveen/
+COPY /home/naveen/kube/shree-inter/* /var/www/html/
 EXPOSE 80 22
