@@ -1,4 +1,5 @@
 FROM centos:latest
+RUN docker run -t -d --name mynew centos
 RUN yum install -y httpd
 RUN yum install -y git
 RUN cd /home/naveen/
