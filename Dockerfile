@@ -5,4 +5,4 @@ RUN ls -ltr /home/naveen/ && cp -r /home/naveen/kube/shree-inter/* /var/www/html
 RUN service nginx start
 EXPOSE 80/tcp
 FROM ubuntu:latest
-RUN agt-get update && apt-get install -y curl && mkdir /home/naveen
+RUN agt-get update && apt-get install -y curl && mkdir /home/test1/
