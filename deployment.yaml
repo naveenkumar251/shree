@@ -5,7 +5,7 @@ metadata:
 spec:
   replicas: 2
   selector:
-    matchlabels:
+    matchLabels:
      app: navtest
   template:
     metadata:
