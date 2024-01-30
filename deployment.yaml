@@ -1,0 +1,20 @@
+kind: Deployment
+apiVersion: apps/v1
+metadata:
+  name: navtest
+spec:
+  replicas: 2
+  selector:
+    matchlabels:
+     app: navtest
+  template:
+    metadata:
+      labels:
+        app: navtest
+    spec:
+      containers:
+      - name: navtest
+        image: naveenkumar251/pipeline-demo
+        imagePullPolicy: Always
+        ports:
+        - containerPort: 80
