@@ -9,6 +9,6 @@ spec:
   - port: 8080
     targetPort: 80
     nodeport: 31200
-selector:
-  app: navtest
+  selector:
+    app: navtest
 type: LoadBalancer
