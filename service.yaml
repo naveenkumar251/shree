@@ -1,0 +1,14 @@
+kind: Service
+apiVersion: v1
+metadata:
+  name: navtest
+  lables:
+    app: navtest
+spec:
+  ports:
+  - port: 8080
+    targetPort: 80
+    nodeport: 31200
+selector:
+  app: navtest
+type: LoadBalancer
