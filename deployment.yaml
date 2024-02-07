@@ -1,20 +1,11 @@
-kind: Deployment
+kind: Pod
 apiVersion: apps/v1
 metadata:
   name: navtest
 spec:
-  replicas: 2
-  selector:
-    matchLabels:
-     app: navtest
-  template:
-    metadata:
-      labels:
-        app: navtest
-    spec:
-      containers:
-      - name: navtest
-        image: naveenkumar251/pipeline-demo
-        imagePullPolicy: Always
-        ports:
-        - containerPort: 80
+  containers:
+  - name: navtest
+    image: naveenkumar251/pipeline-demo
+    imagePullPolicy: Always
+    ports:
+    - containerPort: 80
